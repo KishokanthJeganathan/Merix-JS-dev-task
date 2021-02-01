@@ -7,7 +7,7 @@ const CharacterCard = ({ name, gender, image, origin, specias, status }) => {
 		<S.ArticleWrapper>
 			<Image src={image} alt={name} width={500} height={500} />
 			<div>
-				<h1>Name: {name}</h1>
+				<h2>Name: {name}</h2>
 				<p>Species: {specias}</p>
 				<p>Gender: {gender}</p>
 				<p>Originally from: {origin}</p>
