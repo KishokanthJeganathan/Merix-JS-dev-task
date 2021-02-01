@@ -1,10 +1,12 @@
-import styled from 'styled-components'
+import React from 'react';
+import SearchForm from '../src/components/home-page/search-form/SearchForm';
 
-const Title = styled.h1`
-  font-size: 50px;
-  color: ${({ theme }) => theme.colors.primary};
-`
+const Index = () => {
+	return (
+		<main>
+			<SearchForm />
+		</main>
+	);
+};
 
-export default function Home() {
-  return <Title>My page</Title>
-}
+export default Index;
