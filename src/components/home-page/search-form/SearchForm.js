@@ -1,13 +1,16 @@
 import React, { useContext, useState } from 'react';
 import { SearchContext } from '../../../contexts/SearchContext';
+import { useRouter } from 'next/router';
 
 const SearchForm = () => {
+	const router = useRouter();
 	const [ character, setCharacter ] = useState('');
 	const { getSearchInput } = useContext(SearchContext);
 
 	const handleSubmit = (e) => {
 		e.preventDefault();
 		getSearchInput(character);
+		router.push(character);
 	};
 	return (
 		<form onSubmit={handleSubmit}>

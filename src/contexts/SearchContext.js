@@ -34,7 +34,9 @@ const SearchProvider = ({ children }) => {
 		[ searchInput ]
 	);
 
-	return <SearchContext.Provider value={{ getSearchInput, searchInput }}>{children}</SearchContext.Provider>;
+	return (
+		<SearchContext.Provider value={{ getSearchInput, searchInput, characters }}>{children}</SearchContext.Provider>
+	);
 };
 
 export { SearchContext, SearchProvider };
