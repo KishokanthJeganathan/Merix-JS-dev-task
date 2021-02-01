@@ -12,6 +12,8 @@ I have modularised the code, maybe more thna I should have, but I find that doin
 
 I have written comments wherever I thought you might need an explanation on why I wrote certain code the way I wrote it, but if you think that there were areas that I could have completed in a more cleaner manner, please do let me know. 
 
+Live version is here- https://merix-js-dev-task.vercel.app/
+
 Looking forward to recieving your feedback. 
 
 Cheers,
