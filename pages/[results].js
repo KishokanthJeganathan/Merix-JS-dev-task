@@ -1,7 +1,14 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import ResultTable from '../src/components/result-table/result-holder/ResultTable';
+import { SearchContext } from '../src/contexts/SearchContext';
 
 const ResultsPage = () => {
-	return <div>I am result page</div>;
+	const { characters } = useContext(SearchContext);
+	return (
+		<main>
+			<ResultTable results={characters} />
+		</main>
+	);
 };
 
 export default ResultsPage;
