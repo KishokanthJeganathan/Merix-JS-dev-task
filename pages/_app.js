@@ -6,6 +6,8 @@ const GlobalStyle = createGlobalStyle`
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+	display:grid;
+	
   }
 `;
 
@@ -14,7 +16,6 @@ export default function App({ Component, pageProps }) {
 		<React.Fragment>
 			<GlobalStyle />
 			<SearchProvider>
-				{' '}
 				<Component {...pageProps} />
 			</SearchProvider>
 		</React.Fragment>

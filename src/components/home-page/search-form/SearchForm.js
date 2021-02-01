@@ -1,6 +1,7 @@
 import React, { useContext, useState } from 'react';
 import { SearchContext } from '../../../contexts/SearchContext';
 import { useRouter } from 'next/router';
+import * as S from './styles';
 
 const SearchForm = () => {
 	const router = useRouter();
@@ -13,11 +14,11 @@ const SearchForm = () => {
 		router.push(character);
 	};
 	return (
-		<form onSubmit={handleSubmit}>
+		<S.FormWrapper onSubmit={handleSubmit}>
 			<label htmlFor="characterName">
 				Which awesome character are we looking for?
 				<input
-					placeholder="Evil Rick Sanchez"
+					placeholder="Evil Rick Sanchez perhaps?"
 					name="characterName"
 					id="characterName"
 					type="text"
@@ -26,7 +27,7 @@ const SearchForm = () => {
 				/>
 			</label>
 			<input type="submit" value="Submit" />
-		</form>
+		</S.FormWrapper>
 	);
 };
 

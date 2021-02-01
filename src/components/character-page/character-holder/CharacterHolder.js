@@ -5,7 +5,7 @@ import * as S from './styles';
 
 const CharacterHolder = ({ data }) => {
 	return (
-		<S.Wrapper>
+		<S.SectionWrapper>
 			{data.map((character) => (
 				<CharacterCard
 					key={uuidv4()}
@@ -17,7 +17,7 @@ const CharacterHolder = ({ data }) => {
 					status={character.status}
 				/>
 			))}
-		</S.Wrapper>
+		</S.SectionWrapper>
 	);
 };
 

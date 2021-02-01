@@ -1,16 +1,19 @@
 import React from 'react';
 import Image from 'next/image';
+import * as S from './styles.js';
 
 const CharacterCard = ({ name, gender, image, origin, specias, status }) => {
 	return (
-		<article>
+		<S.ArticleWrapper>
 			<Image src={image} alt={name} width={500} height={500} />
-			<h1>{name}</h1>
-			<p>{specias}</p>
-			<p>{gender}</p>
-			<p>{origin}</p>
-			<p>{status}</p>
-		</article>
+			<div>
+				<h1>Name: {name}</h1>
+				<p>Species: {specias}</p>
+				<p>Gender: {gender}</p>
+				<p>Originally from: {origin}</p>
+				<p>Current Status: {status}</p>
+			</div>
+		</S.ArticleWrapper>
 	);
 };
 
