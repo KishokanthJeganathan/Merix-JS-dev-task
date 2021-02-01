@@ -1,11 +1,13 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
+import { SearchContext } from '../../../contexts/SearchContext';
 
 const SearchForm = () => {
 	const [ character, setCharacter ] = useState('');
+	const { getSearchInput } = useContext(SearchContext);
 
 	const handleSubmit = (e) => {
 		e.preventDefault();
-		alert(character);
+		getSearchInput(character);
 	};
 	return (
 		<form onSubmit={handleSubmit}>
