@@ -6,7 +6,7 @@ import * as S from './styles';
 const CharacterHolder = ({ data }) => {
 	return (
 		<S.Wrapper>
-			{data.results.map((character) => (
+			{data.map((character) => (
 				<CharacterCard
 					key={uuidv4()}
 					name={character.name}
