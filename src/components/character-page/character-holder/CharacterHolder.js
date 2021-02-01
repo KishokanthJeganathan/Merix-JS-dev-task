@@ -8,7 +8,7 @@ const CharacterHolder = ({ data }) => {
 	return (
 		<S.SectionWrapper>
 			{data.length > 1 ? (
-				<h1>We seem to have more results because of the same guy in different dimensions ;)</h1>
+				<h1>We seem to have more results because of the same person in different dimensions ;)</h1>
 			) : (
 				<h1>Here's your result</h1>
 			)}
