@@ -4,6 +4,7 @@ import { v4 as uuidv4 } from 'uuid';
 import * as S from './styles';
 
 const CharacterHolder = ({ data }) => {
+	console.log(data);
 	return (
 		<S.SectionWrapper>
 			{data.length > 1 ? (
@@ -20,7 +21,7 @@ const CharacterHolder = ({ data }) => {
 						gender={character.gender}
 						image={character.image}
 						origin={character.origin.name}
-						specias={character.specias}
+						species={character.species}
 						status={character.status}
 					/>
 				))}
