@@ -6,17 +6,25 @@ import * as S from './styles';
 const CharacterHolder = ({ data }) => {
 	return (
 		<S.SectionWrapper>
-			{data.map((character) => (
-				<CharacterCard
-					key={uuidv4()}
-					name={character.name}
-					gender={character.gender}
-					image={character.image}
-					origin={character.origin.name}
-					specias={character.specias}
-					status={character.status}
-				/>
-			))}
+			{data.length > 1 ? (
+				<h1>We seem to have more results because of the same guy in different dimensions ;)</h1>
+			) : (
+				<h1>Here's your result</h1>
+			)}
+
+			<S.Characters>
+				{data.map((character) => (
+					<CharacterCard
+						key={uuidv4()}
+						name={character.name}
+						gender={character.gender}
+						image={character.image}
+						origin={character.origin.name}
+						specias={character.specias}
+						status={character.status}
+					/>
+				))}
+			</S.Characters>
 		</S.SectionWrapper>
 	);
 };
