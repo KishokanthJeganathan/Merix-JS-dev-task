@@ -9,7 +9,6 @@ const CharacterPage = ({ data }) => {
 	const { characters } = useContext(SearchContext);
 
 	const correctCharacter = characters && characters.filter((result) => result.name === character);
-	console.log(data.results);
 
 	return (
 		<main>
